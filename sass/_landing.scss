@@ -1,0 +1,22 @@
+@use "./base" as *;
+.landing {
+  background-color: $cream;
+  &__container {
+    min-height: 90vh;
+    @include default-flex(flex, column, center, center);
+
+    > h1 {
+      font-size: 45px;
+      letter-spacing: 3px;
+      > #italic {
+        color: $pink;
+        font-style: italic;
+        padding: 0;
+      }
+    }
+    > h2 {
+      font-size: 16px;
+      padding: 0;
+    }
+  }
+}

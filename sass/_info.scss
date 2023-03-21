@@ -1,0 +1,31 @@
+@use "./base" as *;
+
+.info {
+  @include default-flex(flex, column, space-between, center);
+  > .about {
+    text-align: justify;
+    padding: 50px 0 100px 0;
+    border-bottom: 1px dotted $brown;
+
+    @include default-flex(flex, column, center, center);
+
+    > p {
+      padding: 10px 0;
+      word-wrap: normal;
+    }
+  }
+  > .contact {
+    padding: 200px 0;
+    @include default-flex(flex, column, center, center);
+    > h5 {
+      padding: 50px 0;
+    }
+
+    > ul {
+      @include default-flex(flex, row, center, center);
+      > li {
+        padding: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@use "./base" as *;
+
+.navbar {
+  // position: fixed;
+  // top: 500px;
+  &__menu {
+    @include default-flex(flex, row, space-evenly, center);
+    font-family: $main-font;
+    margin-bottom: 90px;
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .navbar {
+    &__menu {
+      > li {
+        margin: 0 2px;
+      }
+    }
+  }
+}

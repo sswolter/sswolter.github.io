@@ -1,0 +1,63 @@
+@forward "./mixins";
+@forward "./breakpoints";
+@use "./breakpoints" as *;
+@use "./mixins" as *;
+
+$heading-font: Georgia, "Times New Roman", Times, serif;
+$main-font: "Chivo", sans-serif;
+
+$cream: #fdf9eb;
+$orange: #feebd8;
+$brown: #cb997e;
+$pink: #f4acb8;
+
+%img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+// styles
+
+* {
+  font-family: $main-font;
+  padding: 0;
+  margin: 0;
+  background-color: $cream;
+  color: $brown;
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font;
+  text-align: center;
+  font-size: 18px;
+}
+
+.wrapper {
+  margin: 0px 20px;
+  @include default-flex(flex, column, center, center);
+}
+
+.inner-wrapper {
+  padding: 0 20px;
+}
+@media (min-width: $breakpoint-large) {
+  .inner-wrapper {
+    max-width: 700px;
+  }
+}
+
+a:hover {
+  color: $pink;
+}
+
+@media (max-width: $breakpoint-small) {
+  p {
+    max-width: 300px;
+  }
+}

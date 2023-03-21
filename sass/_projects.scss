@@ -1,0 +1,51 @@
+@use "./base" as *;
+
+.project {
+  @include default-flex(flex, column, center, center);
+  padding-top: 40px;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.item {
+  @include default-flex(flex, column, space-between, center);
+  &__img {
+    @extend %img-responsive;
+    border-radius: 5px;
+    max-width: 360px;
+  }
+
+  &__heading {
+    font-size: 18px;
+    letter-spacing: 2px;
+    padding: 30px 0 15px 0;
+  }
+
+  &__desc {
+    text-align: justify;
+    font-size: 14px;
+  }
+
+  > ul {
+    @include default-flex(flex, row, center, center);
+    padding: 20px;
+
+    > li {
+      @include default-flex(flex, row, center, center);
+      padding: 10px 20px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .project {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: $breakpoint-large) {
+  .project {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
