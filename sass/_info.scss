@@ -5,7 +5,7 @@
   > .about {
     text-align: justify;
     padding: 50px 0 100px 0;
-    border-bottom: 1px dotted $brown;
+    border-bottom: 1px dotted $blue;
 
     @include default-flex(flex, column, center, center);
 

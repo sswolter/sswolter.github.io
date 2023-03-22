@@ -5,11 +5,12 @@
 
 $heading-font: Georgia, "Times New Roman", Times, serif;
 $main-font: "Chivo", sans-serif;
+$landing-font: "Rubik", sans-serif;
 
-$cream: #fdf9eb;
-$orange: #feebd8;
-$brown: #cb997e;
-$pink: #f4acb8;
+$cream: #fffaf0;
+
+$blue: #7d9ad5;
+$pink: #ffa5a5;
 
 %img-responsive {
   width: 100%;
@@ -23,7 +24,7 @@ $pink: #f4acb8;
   padding: 0;
   margin: 0;
   background-color: $cream;
-  color: $brown;
+  color: $blue;
   list-style-type: none;
 }
 
